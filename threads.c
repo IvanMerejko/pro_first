@@ -104,6 +104,7 @@ void P1_and_P4_function(queue_type* queue , const char* thread_name){
         printf("%s send signal \n" , thread_name);
         pthread_cond_signal(&conditional_variable);
         pthread_mutex_unlock(&mutex);
+        use_and_modifier_atomic_values(thread_name , !strcmp(thread_name , "P1") ? 2 : 5 );
 
     }
 }
@@ -129,8 +130,10 @@ bool push_value_to_buffer(queue_type* queue, int index , const char* thread_name
 
     int sem_value = -1;
     sem_getvalue(&semaphore , &sem_value);
+    printf("Number of empty queue %d\nNumber of full queue: %d\n" , numberOfEmptyQueue , numberOfFullQueue);
     printf("Number of elements in queue: %d\n", sem_value);
     if(sem_value < MAX_QUEUE_LENGHT){
+        isTakeWhenQueueIsFull = true;
         push_back(queue , get_atomic_values_by_index(index));
         sem_getvalue(&semaphore , &sem_value);
         printf("Thread %s: semaphore=%d; element %d (atomic index %d) CREATED; \n",
@@ -138,7 +141,11 @@ bool push_value_to_buffer(queue_type* queue, int index , const char* thread_name
 
         sem_post(&semaphore);
     } else {
-        ++numberOfFullQueue;
+        if(isTakeWhenQueueIsFull){
+            ++numberOfFullQueue;
+            isTakeWhenQueueIsFull = false;
+        }
+
     }
     pthread_mutex_unlock(&mutex);
     return true;
@@ -160,9 +167,6 @@ void modifier_atomic_values(const char* thread , int value ){
     pthread_mutex_trylock(&mutex);
     printf("%s thread modifier atomic values\n" , thread);
     pthread_mutex_unlock(&mutex);
-   /* __sync_fetch_and_add(&atomicValues.first_int , value);
-    __sync_fetch_and_and(&atomicValues.first_int , value);
-    __sync_fetch_and_nand(&atomicValues.first_int , value);*/
 
     __sync_sub_and_fetch(&atomicValues.first_int , value);
     __sync_sub_and_fetch(&atomicValues.second_int , value);
@@ -178,6 +182,36 @@ void modifier_atomic_values(const char* thread , int value ){
 
    /* __sync_bool_compare_and_swap(&atomicValues.first_int ,1, value);
     __sync_val_compare_and_swap(&atomicValues.first_int ,1, value);*/
+}
+void use_and_modifier_atomic_values(const char* thread, int value){
+    printf("%s thread use atomic value:%d  and modifier it\n" , thread , __sync_fetch_and_add(&atomicValues.first_int , value));
+    thread_careful_print(atomicValues.first_int);
+
+    printf("%s thread use atomic value:%d  and modifier it\n" , thread , __sync_fetch_and_and(&atomicValues.second_int , value));
+    thread_careful_print(atomicValues.second_int);
+
+    printf("%s thread use atomic value:%d  and modifier it\n" , thread , __sync_fetch_and_nand(&atomicValues.first_unsigned , value));
+    thread_careful_print(atomicValues.first_unsigned);
+
+    printf("%s thread use atomic value:%d  and modifier it\n" , thread , __sync_fetch_and_add(&atomicValues.second_unsigned , value));
+    thread_careful_print(atomicValues.second_unsigned);
+
+    printf("%s thread use atomic value:%ld  and modifier it\n" , thread , __sync_fetch_and_and(&atomicValues.first_long , value));
+    thread_careful_print((int)atomicValues.first_long);
+
+    printf("%s thread use atomic value:%ld  and modifier it\n" , thread , __sync_fetch_and_nand(&atomicValues.second_long , value));
+    thread_careful_print((int)atomicValues.second_long);
+
+    printf("%s thread use atomic value:%lu  and modifier it\n" , thread , __sync_fetch_and_add(&atomicValues.first_long_unsigned , value));
+    thread_careful_print((int)atomicValues.first_long_unsigned);
+
+    printf("%s thread use atomic value:%lu  and modifier it\n" , thread , __sync_fetch_and_and(&atomicValues.second_long_unsigned , value));
+    thread_careful_print((int)atomicValues.second_long_unsigned);
+}
+void thread_careful_print(int value){
+    pthread_mutex_trylock(&mutex);
+    printf("New value: %d\n" , value);
+    pthread_mutex_unlock(&mutex);
 }
 void print_atomic_values(){
     pthread_mutex_trylock(&mutex);
@@ -216,5 +250,6 @@ int get_atomic_values_by_index(int index){
     }
 }
 bool is_end(){
-    return numberOfFullQueue == 2 && numberOfFullQueue == 2;
+    return (numberOfEmptyQueue == 2 && numberOfFullQueue == 2) ||
+            numberOfEmptyQueue > 10 || numberOfFullQueue > 10;
 }

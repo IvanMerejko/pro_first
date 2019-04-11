@@ -23,6 +23,7 @@ struct many_values{
     long unsigned first_long_unsigned;
     long unsigned second_long_unsigned;
 };
+bool isTakeWhenQueueIsFull;
 typedef struct many_values atomic_values;
 static int numberOfEmptyQueue = 0;
 static int numberOfFullQueue = 0;
@@ -54,6 +55,9 @@ void P1_and_P4_function(queue_type* , const char*);
 void P2_and_P5_function(queue_type* , const char*);
 bool push_value_to_buffer(queue_type* ,int, const char *);
 void modifier_atomic_values(const char* , int );
+void use_and_modifier_atomic_values(const char* , int);
+void thread_careful_print(int );
+
 void print_atomic_values();
 bool is_end();
 int get_atomic_values_by_index(int);

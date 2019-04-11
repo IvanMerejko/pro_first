@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/PRO.dir/main.c.o CMakeFiles/PRO.dir/queue.c.o CMakeFiles/PRO.dir/threads.c.o  -o PRO 

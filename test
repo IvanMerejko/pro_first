@@ -1,0 +1,299 @@
+P1 waits at the barrier
+P2 waits for signals 
+P4 waits at the barrier
+P1 works after barrier
+P1 send signal 
+P1 waits at the barrier
+P4 works after barrier
+P4 send signal 
+P2 start works 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 1
+Thread P3: semaphore=1; element 10 TAKEN; 
+Start use value
+End use value
+Thread P2: semaphore=1; element 3 CREATED; 
+P2 waits for signals 
+P4 waits at the barrier
+Thread P3: semaphore=1; element 9 TAKEN; 
+P4 works after barrier
+P4 send signal 
+P5 waits for signals 
+P1 works after barrier
+P1 send signal 
+P1 waits at the barrier
+P2 start works 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 1
+Thread P2: semaphore=1; element 17 CREATED; 
+P2 waits for signals 
+Start use value
+End use value
+Thread P3: semaphore=1; element 3 TAKEN; 
+Start use value
+End use value
+Thread P3: semaphore=0; element 17 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+P4 waits at the barrier
+Thread P6: semaphore=0; element 6 CREATED; 
+Thread P3: semaphore=0; element 6 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 15 CREATED; 
+Thread P3: semaphore=0; element 15 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 13 CREATED; 
+Thread P3: semaphore=0; element 13 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 15 CREATED; 
+Thread P3: semaphore=0; element 15 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 6 CREATED; 
+Thread P3: semaphore=0; element 6 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 12 CREATED; 
+Thread P3: semaphore=0; element 12 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 9 CREATED; 
+Thread P3: semaphore=0; element 9 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 1 CREATED; 
+Thread P3: semaphore=0; element 1 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 2 CREATED; 
+Thread P3: semaphore=0; element 2 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 7 CREATED; 
+Thread P3: semaphore=0; element 7 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 10 CREATED; 
+Thread P3: semaphore=0; element 10 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 19 CREATED; 
+Thread P3: semaphore=0; element 19 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 3 CREATED; 
+Thread P3: semaphore=0; element 3 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 6 CREATED; 
+Thread P3: semaphore=0; element 6 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 0 CREATED; 
+Thread P3: semaphore=0; element 0 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 6 CREATED; 
+Thread P3: semaphore=0; element 6 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 12 CREATED; 
+Thread P3: semaphore=0; element 12 TAKEN; 
+Start use value
+End use value
+P1 works after barrier
+P1 send signal 
+P1 waits at the barrier
+P4 works after barrier
+P4 send signal 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 16 CREATED; 
+P4 waits at the barrier
+Number of full queue: 0 and empty queue: 0
+P4 works after barrier
+Thread P3: semaphore=0; element 16 TAKEN; 
+Start use value
+End use value
+P1 works after barrier
+P1 send signal 
+P1 waits at the barrier
+P4 send signal 
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 11 CREATED; 
+Thread P3: semaphore=0; element 11 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 8 CREATED; 
+Thread P3: semaphore=0; element 8 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 7 CREATED; 
+Thread P3: semaphore=0; element 7 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 9 CREATED; 
+Thread P3: semaphore=0; element 9 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 2 CREATED; 
+Thread P3: semaphore=0; element 2 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 10 CREATED; 
+Thread P3: semaphore=0; element 10 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 2 CREATED; 
+Thread P3: semaphore=0; element 2 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 3 CREATED; 
+Thread P3: semaphore=0; element 3 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 7 CREATED; 
+Thread P3: semaphore=0; element 7 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 15 CREATED; 
+Thread P3: semaphore=0; element 15 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 9 CREATED; 
+Thread P3: semaphore=0; element 9 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 2 CREATED; 
+Thread P3: semaphore=0; element 2 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 2 CREATED; 
+Thread P3: semaphore=0; element 2 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 18 CREATED; 
+Thread P3: semaphore=0; element 18 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 9 CREATED; 
+Thread P3: semaphore=0; element 9 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 7 CREATED; 
+Thread P3: semaphore=0; element 7 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 13 CREATED; 
+Thread P3: semaphore=0; element 13 TAKEN; 
+Start use value
+End use value
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P6: semaphore=0; element 16 CREATED; 
+Thread P3: semaphore=0; element 16 TAKEN; 
+Start use value
+End use value
+P5 start works 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+P4 waits at the barrier
+P2 start works 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 0
+Thread P2: semaphore=0; element 2 CREATED; 
+Number of full queue: 0 and empty queue: 0
+P1 works after barrier
+Number of elements in queue: 0
+P4 works after barrier
+P4 send signal 
+Thread P3: semaphore=0; element 2 TAKEN; 
+P4 waits at the barrier
+Thread P6: semaphore=0; element 9 CREATED; 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 1
+Thread P6: semaphore=1; element 13 CREATED; 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 2
+Thread P6: semaphore=2; element 1 CREATED; 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 3
+Thread P6: semaphore=3; element 19 CREATED; 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 4
+Thread P6: semaphore=4; element 4 CREATED; 
+Number of full queue: 0 and empty queue: 0
+Number of elements in queue: 5
+Number of full queue: 1 and empty queue: 1
+Number of elements in queue: 5
+Number of full queue: 2 and empty queue: 2
+Thread P6 stopped !!!

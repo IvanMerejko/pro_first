@@ -7,6 +7,8 @@ int main() {
     queue_type queue;
     construct_empty_queue(&queue);
 
+
+
     push_back(&queue , 10);
     sem_post(&semaphore);
     push_back(&queue , 9);
@@ -16,6 +18,8 @@ int main() {
     pthread_barrier_init(&barrier , NULL , 2);
     pthread_mutex_init(&mutex , NULL);
     pthread_cond_init(&conditional_variable , NULL);
+    isTakeWhenQueueIsFull = true;
+
 
     printf("atomic values: \n" );
     print_atomic_values();
